@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(0, 0, 0);
+        color: rgb(44, 222, 219);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+        background-color: rgb(159, 71, 155);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 23px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        margin: 0 23px;
+    }
+
+    nav ul li a:hover {
+        color: rgb(113, 7, 134);
+        size: 1.02rem;
+    }
+
+    main hr {
+        border: 0;
+
+        background: rgb(113, 7, 134);
+        height: 2.2px;
+        margin: 40px 32px;
+    }
+
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0px 0;
+
+    }
+
+
+    .firstSection>div {
+        width: 30%;
+
+    }
+
+    .SecondSection>div {
+
+        justify-content: space-around;
+        align-items: center;
+        margin: 40px 0;
+        margin-left: 50%;
+        font-size: 2rem;
+        color: rgb(250, 250, 250);
+        text-underline-offset: 23;
+
+    }
+
+
+
+    .leftSection {
+        margin: 9%;
+        font-size: 3rem;
+
+    }
+
+    .leftSection a>img {
+        margin-top: 28%;
+       
+    }
+
+    .img-hor {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: -37%;
+       
+    }
+
+    div.para {
+        margin-top: 5%;
+        font-size: 23px;
+        font-family: cursive;
+        font-weight: lighter;
+    }
+
+    .red {
+        color: rgb(148, 57, 234)
+    }
+
+    .rightSection {
+        width: 30%;
+        margin-right: 7%;
+    }
+
+    .purple {
+        color: rgb(158, 85, 226)
+    }
+
+    div.about {
+        margin-left: 132px;
+        margin-top: 5%;
+        font-size: 1.6rem;
+        align-items: start;
+        width: 50%;
+        font-size: 120%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .SecondSection img {
+        margin-left: 282px;
+        margin-top: -71%;
+        justify-content: space-between;
+    }
+
+    .img1 {
+        margin-left: 210px;
+        margin-top: 3%;
+
+    }
+
+    .left img {
+        margin-left: 50%;
+        margin-top: -70%;
+        justify-content: space-evenly;
+        display: flex;
+    }
+
+    .i {
+        color: rgb(152, 74, 225);
+    }
+
+    .girlimg {
+        width: 30%;
+        margin-right: 3%;
+    }
+
+    div.skills {
+        margin-top: 5%;
+        margin-left: 50%;
+        font-size: 2rem;
+    }
+
+    img {
+        margin-right: -12%;
+    }
+/*Skills*/
+ /* Styles for the skills component */
+
+.skills {
+    margin-top: 20px;
+   
+}
+
+.title{
+    margin-left: 50%;
+    font-size: 120%;
+}
+
+p{
+    margin-top: 5%;
+    margin-left: 15%;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+
+.item-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+.item:nth-child(1) .progress-bar {
+    background-color: #007bff;
+    width: 90%;}
+
+.item:nth-child(2) .progress-bar {
+    background-color: #28a745; 
+    width: 65%;
+}
+
+.item:nth-child(3) .progress-bar {
+    background-color: #ffc107; 
+    width: 55%; 
+}
+
+.item:nth-child(4) .progress-bar {
+    background-color: #dc3545; 
+    width: 50%; 
+}
+
+/*Contact ME Section*/
+.contact {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    margin-left: 4%;
+    font-weight: 5000;
+    color: #969696; /* Dark color for the heading */
+}
+
+.contact-info {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555; /* Text color for contact info */
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: #4CAF50; /* Icon color for contact info */
+    font-size: 18px; /* Adjust icon size */
+}
+
+
+  
+</style>
+<script>
+// Function to handle smooth scrolling
+function smoothScroll(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+}
+
+// Function to handle click events on navigation links
+function setupNavLinks() {
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            const target = this.getAttribute("href"); // Get the href attribute value
+            smoothScroll(target); // Call smoothScroll function with the target
+        });
+    });
+}
+
+// Initialize navigation setup
+document.addEventListener("DOMContentLoaded", function() {
+    setupNavLinks();
+});
+</script>
+<body>
+    <header>
+        <nav>
+            <div class="left">Anand's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="/">My Skills</a></li>
+
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+
+
+            <div class="leftSection">
+
+                Hello, <span class="purple ">I am Anand</span>
+
+
+                <div class="para">I am a <span class="red">programmer </span> and a <span class="red">web
+                        Devolper </span> having Experience in building a netflix clone.</div>
+                <div class="img-hor">
+                    <a href="https://github.com/Anandtasgave">
+                        <img src="github.png" width="50px" height=50px>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/anand-tasgave-5351b4257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                        <img src="linkdin.png" width="50px" height=50px>
+                    </a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="tp.png.webp" alt="" width="434" height="456">
+            </div>
+        </section>
+        <hr>
+        <section class="SecondSection">
+            <div class="mypassion">
+                About Me
+            </div>
+            <div class="about">
+                Hello, <div class="i"><b>I'm Anand</b></div> A passionate
+          programmer.
+
+                My journey in this field began with a profound curiosity and a desire to be a best web Devoloper.
+
+                Looking ahead, <div class="i">I'm excited to become one of the best web devoloper</div> and a loyal
+                worker. 
+
+                Thank you for taking the time to learn more about me. I'm excited about the possibilities that lie ahead
+                and the opportunity to make a meaningful impact in this web devolopment field.
+
+
+            </div>
+
+            <div class="girlimg"><img src="tp1.png" alt="" width="290px"></div>
+            <img src="html2.png" alt="" height="100px">
+            <img src="css.png" alt="" height="100px">
+
+
+
+
+        </section>
+        <hr>
+        <section class="skills container">
+            <div class="title">
+
+                <h2>MY SKILLS</h2>
+                 <div>
+                  
+                    </div>
+                     </div>
+
+                <section class="skills">
+                    <div class="row">
+                        <div class="item">
+                            <div class="item-text">
+                                <span>C</span>
+                                <span class="w-90">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar w-90"></div>
+                            </div>
+                        </div>
+                
+                        <div class="item">
+                            <div class="item-text">
+                                <span>C++</span>
+                                <span class="w-90">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar w-90"></div>
+                            </div>
+                        </div>
+                
+                        <div class="item">
+                            <div class="item-text">
+                                <span>CSS3</span>
+                                <span class="w-70">70%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar w-70"></div>
+                            </div>
+                        </div>
+                
+                        <div class="item">
+                            <div class="item-text">
+                                <span>JavaScript</span>
+                                <span class="w-70">70%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar w-70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr>
+                <section class="contact">
+                    <h2>Contact Me</h2>
+                    <div class="contact-info">
+                        <p>Email: tasgaveanand18@gmail.com</p>
+                     
+                        <p>Address: Ichalkaranji, Maharashtra 416 115</p>
+                    </div>
+                </section>
+                
+                
+    </main>
+</body>
+
+</html>
